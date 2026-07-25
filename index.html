@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <meta name="description" content="SOLITAIRE FINZ MART – Trusted Loan DSA Solutions with 15+ Years of Service. Home, personal, business loans in Bhiwandi. Apply now!">
+  <title>SOLITAIRE FINZ MART | Loan DSA & CRM</title>
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      transition: background 0.2s ease, color 0.15s ease;
+    }
+
+    :root {
+      --navy: #0a1a2f;
+      --teal: #1b7a7a;
+      --gold: #c9a45b;
+      --gold-light: #e4d1a0;
+      --white: #ffffff;
+      --light-bg: #f4f7fc;
+      --card-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+      --radius: 20px;
+      --font-dark: #1e293b;
+      --font-muted: #475569;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: var(--font-dark);
+      line-height: 1.6;
+    }
+
+    body.dark {
+      --light-bg: #0f172a;
+      --font-dark: #e2e8f0;
+      --font-muted: #94a3b8;
+      --white: #1e293b;
+      --card-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* NAV */
+    .top-bar {
+      background: var(--navy);
+      color: white;
+      padding: 10px 0;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .top-bar a { color: var(--gold-light); margin: 0 6px; text-decoration: none; }
+    .top-bar .social i { margin: 0 4px; }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      background: var(--white);
+      border-radius: 40px;
+      margin: 12px 0 20px;
+      padding: 12px 28px;
+      box-shadow: var(--card-shadow);
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: var(--navy);
+    }
+    .logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--font-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { color: var(--teal); }
+    .theme-toggle {
+      background: var(--light-bg);
+      border: none;
+      border-radius: 40px;
+      padding: 6px 14px;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(145deg, var(--navy) 0%, #0d2847 100%);
+      color: white;
+      padding: 60px 0 70px;
+      border-radius: 40px;
+      margin: 10px 0 30px;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .hero h1 i { color: var(--gold); }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin: 20px 0 28px;
+      max-width: 540px;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 60px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary { background: var(--gold); color: var(--navy); }
+    .btn-primary:hover { background: #b8923f; transform: scale(1.02); }
+    .btn-outline { background: transparent; border: 2px solid white; color: white; }
+    .btn-outline:hover { background: white; color: var(--navy); }
+    .btn-whatsapp { background: #25D366; color: white; }
+    .btn-whatsapp:hover { background: #1da851; }
+
+    .hero-stats {
+      display: flex;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .hero-stats div { font-weight: 300; }
+    .hero-stats strong { font-size: 1.8rem; display: block; }
+
+    /* CARDS */
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 40px 0 20px;
+      color: var(--navy);
+    }
+    .section-title span { color: var(--gold); }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin: 30px 0;
+    }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      box-shadow: var(--card-shadow);
+      transition: 0.2s;
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    .card:hover { transform: translateY(-6px); }
+    .card i { font-size: 2.2rem; color: var(--teal); margin-bottom: 14px; }
+    .card h3 { margin-bottom: 8px; }
+
+    /* loan cards */
+    .loan-tag {
+      background: var(--light-bg);
+      border-radius: 40px;
+      padding: 4px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--teal);
+    }
+
+    /* DASHBOARD */
+    .dashboard {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 40px 0;
+      box-shadow: var(--card-shadow);
+    }
+    .dash-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .kpi {
+      background: var(--light-bg);
+      border-radius: 18px;
+      padding: 16px;
+      text-align: center;
+    }
+    .kpi h4 { font-size: 0.8rem; text-transform: uppercase; opacity: 0.6; }
+    .kpi .value { font-size: 2rem; font-weight: 700; color: var(--navy); }
+
+    /* tables */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    th {
+      text-align: left;
+      padding: 12px 8px;
+      background: var(--light-bg);
+      color: var(--font-muted);
+    }
+    td {
+      padding: 12px 8px;
+      border-bottom: 1px solid #e9edf2;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    .badge-new { background: #dbeafe; color: #1e4b8a; }
+    .badge-progress { background: #fef3c7; color: #92400e; }
+    .badge-approved { background: #d1fae5; color: #065f46; }
+    .badge-rejected { background: #fee2e2; color: #991b1b; }
+    .badge-disbursed { background: #d1fae5; color: #065f46; }
+
+    .status-indicator {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    /* notification */
+    .notif-panel {
+      background: var(--light-bg);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin: 20px 0;
+    }
+    .notif-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #d1d9e6;
+    }
+    .notif-item i { color: var(--gold); margin-right: 10px; }
+
+    /* contact & footer */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 30px 0;
+    }
+    .footer {
+      background: var(--navy);
+      color: white;
+      padding: 40px 0;
+      margin-top: 40px;
+      border-radius: 40px 40px 0 0;
+    }
+    .footer a { color: var(--gold-light); }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: white;
+      padding: 16px 20px;
+      border-radius: 60px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      z-index: 999;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* mobile */
+    @media (max-width: 800px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .navbar { flex-direction: column; align-items: stretch; gap: 12px; }
+      .nav-links { justify-content: center; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+    @media (max-width: 500px) {
+      .hero-stats { flex-wrap: wrap; }
+      .cta-group .btn { width: 100%; text-align: center; }
+    }
+
+    /* DARK MODE OVERRIDES */
+    body.dark .card { background: #1e293b; border-color: #2d3a4f; }
+    body.dark .dashboard { background: #1e293b; }
+    body.dark .kpi { background: #0f172a; }
+    body.dark .kpi .value { color: var(--gold-light); }
+    body.dark .navbar { background: #1e293b; }
+    body.dark .top-bar { background: #0b1a2b; }
+    body.dark table td { border-color: #334155; }
+    body.dark .notif-panel { background: #0f172a; }
+    body.dark .notif-item { border-color: #2d3a4f; }
+    body.dark .hero { background: #0b1a2b; }
+    body.dark .section-title { color: #e2e8f0; }
+    body.dark .logo { color: white; }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%;">
+    <div><i class="fas fa-phone-alt"></i> <a href="https://wa.me/918779023084" target="_blank">+91 8779023084</a> &nbsp;|&nbsp; <i class="fas fa-envelope"></i> <a href="mailto:sachinkale241981@gmail.com">sachinkale241981@gmail.com</a></div>
+    <div class="social"><i class="fab fa-facebook"></i> <i class="fab fa-instagram"></i> <i class="fab fa-linkedin"></i></div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="logo">SOLITAIRE <span>FINZ</span> MART</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Loans</a>
+      <a href="#dashboard">CRM</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge"><i class="fas fa-star"></i> 15+ Years of Trust</span>
+        <h1>Trusted Loan DSA <br><i>Solutions</i> with 15+ Years</h1>
+        <p>Faster processing, better follow-ups, and smarter customer support — SOLITAIRE FINZ MART, your reliable partner for all loan needs.</p>
+        <div class="cta-group">
+          <a href="#enquiry" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+          <a href="https://wa.me/918779023084" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk on WhatsApp</a>
+          <a href="#agent" class="btn btn-outline"><i class="fas fa-user-tie"></i> Become an Agent</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>1500+</strong> Loans Disbursed</div>
+          <div><strong>98%</strong> Customer Satisfaction</div>
+          <div><strong>50+</strong> Active Agents</div>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <i class="fas fa-handshake" style="font-size: 8rem; opacity: 0.3; color: var(--gold);"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About <span>SOLITAIRE</span> FINZ MART</h2>
+    <div class="card-grid">
+      <div class="card"><i class="fas fa-building"></i><h3>15+ Years of Service</h3><p>Established expertise in project finance and loan advisory across India.</p></div>
+      <div class="card"><i class="fas fa-users"></i><h3>Customer First</h3><p>Transparent process, personalized guidance, and quick disbursals.</p></div>
+      <div class="card"><i class="fas fa-shield-alt"></i><h3>Trust & Integrity</h3><p>We uphold the highest standards in financial consulting and DSA services.</p></div>
+      <div class="card"><i class="fas fa-chart-line"></i><h3>Strong Network</h3><p>Pan-India agent network and partnerships with top banks & NBFCs.</p></div>
+    </div>
+  </section>
+
+  <!-- LOAN SERVICES -->
+  <section id="services">
+    <h2 class="section-title">Our <span>Loan</span> Products</h2>
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px,1fr));">
+      <div class="card"><i class="fas fa-home"></i><h4>Home Loan</h4><span class="loan-tag">upto ₹5Cr</span></div>
+      <div class="card"><i class="fas fa-user"></i><h4>Personal Loan</h4><span class="loan-tag">instant approval</span></div>
+      <div class="card"><i class="fas fa-briefcase"></i><h4>Business Loan</h4><span class="loan-tag">MSME/Startup</span></div>
+      <div class="card"><i class="fas fa-building"></i><h4>Loan Against Property</h4><span class="loan-tag">high value</span></div>
+      <div class="card"><i class="fas fa-truck"></i><h4>New/Used Car Loan</h4><span class="loan-tag">upto 100%</span></div>
+      <div class="card"><i class="fas fa-industry"></i><h4>Project Finance</h4><span class="loan-tag">commercial</span></div>
+      <div class="card"><i class="fas fa-hand-holding-usd"></i><h4>Balance Transfer</h4><span class="loan-tag">lower EMI</span></div>
+      <div class="card"><i class="fas fa-credit-card"></i><h4>OD/CC Facility</h4><span class="loan-tag">working capital</span></div>
+      <div class="card"><i class="fas fa-warehouse"></i><h4>Commercial Property Loan</h4></div>
+      <div class="card"><i class="fas fa-tools"></i><h4>Construction Loan</h4></div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD / CRM -->
+  <section id="dashboard">
+    <h2 class="section-title">CRM <span>Dashboard</span> <small style="font-size:1rem; font-weight:400;">(Live Demo)</small></h2>
+    <div class="dashboard">
+      <div class="dash-header">
+        <h3><i class="fas fa-tachometer-alt"></i> Lead Pipeline</h3>
+        <div><span class="badge badge-new"><i class="fas fa-bell"></i> 3 new alerts</span></div>
+      </div>
+      <div class="kpi-grid" id="kpiGrid">
+        <div class="kpi"><h4>Total Leads</h4><div class="value" id="totalLeads">347</div></div>
+        <div class="kpi"><h4>New Enquiries</h4><div class="value" id="newEnquiries">28</div></div>
+        <div class="kpi"><h4>In Process</h4><div class="value" id="inProcess">94</div></div>
+        <div class="kpi"><h4>Approved</h4><div class="value" id="approved">62</div></div>
+        <div class="kpi"><h4>Disbursed</h4><div class="value" id="disbursed">41</div></div>
+        <div class="kpi"><h4>Active Agents</h4><div class="value" id="activeAgents">52</div></div>
+      </div>
+
+      <!-- Lead Table -->
+      <h4><i class="fas fa-list-ul"></i> Recent Leads</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Customer</th><th>Loan</th><th>Status</th><th>Agent</th><th>Updated</th></tr></thead>
+          <tbody id="leadTableBody">
+            <tr><td>Rahul Sharma</td><td>Home Loan</td><td><span class="badge badge-progress">In Process</span></td><td>Priya M.</td><td>2h ago</td></tr>
+            <tr><td>Anita Patel</td><td>Personal Loan</td><td><span class="badge badge-new">New</span></td><td>—</td><td>15m ago</td></tr>
+            <tr><td>Vikram Singh</td><td>Business Loan</td><td><span class="badge badge-approved">Approved</span></td><td>Ajay K.</td><td>1d ago</td></tr>
+            <tr><td>Sunil Desai</td><td>LAP</td><td><span class="badge badge-rejected">Rejected</span></td><td>—</td><td>3d ago</td></tr>
+            <tr><td>Meera Nair</td><td>Car Loan</td><td><span class="badge badge-disbursed">Disbursed</span></td><td>Ravi T.</td><td>5d ago</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Notifications -->
+      <div class="notif-panel" id="notifPanel">
+        <h4><i class="fas fa-bell"></i> Real-time Notifications</h4>
+        <div id="notifList">
+          <div class="notif-item"><span><i class="fas fa-user-plus"></i> New lead: Anita Patel (Personal Loan)</span> <small>15m ago</small></div>
+          <div class="notif-item"><span><i class="fas fa-user-check"></i> Agent assigned: Ajay K. → Vikram Singh</span> <small>1h ago</small></div>
+          <div class="notif-item"><span><i class="fas fa-file-alt"></i> Pending docs: Rahul Sharma</span> <small>2h ago</small></div>
+        </div>
+      </div>
+
+      <!-- Agent performance -->
+      <h4><i class="fas fa-user-tie"></i> Agent Performance</h4>
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fit,minmax(180px,1fr));">
+        <div class="card"><i class="fas fa-user-circle"></i><h4>Priya M.</h4><p>12 leads | 8 approved</p><span class="badge badge-approved">Top performer</span></div>
+        <div class="card"><i class="fas fa-user-circle"></i><h4>Ajay K.</h4><p>9 leads | 5 approved</p></div>
+        <div class="card"><i class="fas fa-user-circle"></i><h4>Ravi T.</h4><p>7 leads | 6 disbursed</p><span class="badge badge-disbursed">⭐</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENQUIRY FORM + AGENT -->
+  <section id="enquiry" style="margin: 40px 0;">
+    <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
+      <div class="card">
+        <h3><i class="fas fa-pen"></i> Customer Enquiry</h3>
+        <form id="enquiryForm">
+          <input type="text" placeholder="Full Name" required style="width:100%; padding:12px; margin:8px 0; border-radius:30px; border:1px solid #d1d9e6;">
+          <input type="tel" placeholder="Mobile Number" required style="width:100%; padding:12px; margin:8px 0; border-radius:30px; border:1px solid #d1d9e6;">
+          <input type="email" placeholder="Email" style="width:100%; padding:12px; margin:8px 0; border-radius:30px; border:1px solid #d1d9e6;">
+          <select style="width:100%; padding:12px; margin:8px 0; border-radius:30px; border:1px solid #d1d9e6;">
+            <option>Home Loan</option><option>Personal Loan</option><option>Business Loan</option><option>LAP</option>
+          </select>
+          <input type="number" placeholder="Loan Amount (₹)" style="width:100%; padding:12px; margin:8px 0; border-radius:30px; border:1px solid #d1d9e6;">
+          <button type="submit" class="btn btn-primary" style="width:100%;">Submit Enquiry</button>
+        </form>
+        <p style="font-size:0.8rem; margin-top:8px;"><i class="fas fa-lock"></i> Your data is safe with us.</p>
+      </div>
+      <div class="card" id="agent">
+        <h3><i class="fas fa-handshake"></i> Become an Agent</h3>
+        <p>Join our DSA network and earn attractive commissions. 15+ years of trust.</p>
+        <form>
+          <input type="text" placeholder="Full Name" style="width:100%; padding:12px; margin:8px 0; border-radius:30px; border:1px solid #d1d9e6;">
+          <input type="tel" placeholder="Mobile" style="width:100%; padding:12px; margin:8px 0; border-radius:30px; border:1px solid #d1d9e6;">
+          <input type="text" placeholder="City" style="width:100%; padding:12px; margin:8px 0; border-radius:30px; border:1px solid #d1d9e6;">
+          <button type="submit" class="btn btn-whatsapp" style="width:100%;"><i class="fab fa-whatsapp"></i> Register Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS & FAQ -->
+  <section>
+    <h2 class="section-title">What Our <span>Clients</span> Say</h2>
+    <div class="card-grid">
+      <div class="card"><i class="fas fa-quote-left" style="color:var(--gold);"></i><p>“SOLITAIRE FINZ MART made my home loan process smooth and fast. Highly recommended!”</p><h4>— Amit K.</h4></div>
+      <div class="card"><i class="fas fa-quote-left" style="color:var(--gold);"></i><p>“They helped me with business loan approval within a week. Professional team.”</p><h4>— Sneha R.</h4></div>
+      <div class="card"><i class="fas fa-quote-left" style="color:var(--gold);"></i><p>“Best DSA in Bhiwandi. Transparent and trustworthy.”</p><h4>— Mahesh P.</h4></div>
+    </div>
+
+    <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+    <div class="card-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="card"><h4>What is DSA?</h4><p>Direct Selling Agent – we connect customers with banks/NBFCs for loans.</p></div>
+      <div class="card"><h4>How long does approval take?</h4><p>Typically 2-7 working days depending on loan type.</p></div>
+      <div class="card"><h4>Is there any fee?</h4><p>We charge only upon successful disbursal. No hidden fees.</p></div>
+      <div class="card"><h4>Can I become an agent?</h4><p>Yes! Register above and start earning commissions.</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Get in <span>Touch</span></h2>
+    <div class="contact-grid">
+      <div>
+        <p><i class="fas fa-map-pin"></i> <strong>Office:</strong> Shop No. 8, Janaram Niwas, Purna, Bhiwandi, 421302</p>
+        <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/918779023084">8779023084</a></p>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> sachinkale241981@gmail.com</p>
+        <div style="background:#d1d9e6; height:200px; border-radius:20px; margin-top:20px; display:flex; align-items:center; justify-content:center; color:var(--font-muted);"><i class="fas fa-map-marked-alt"></i> Map placeholder</div>
+      </div>
+      <div>
+        <form>
+          <input type="text" placeholder="Name" style="width:100%; padding:12px; margin:6px 0; border-radius:30px; border:1px solid #d1d9e6;">
+          <input type="email" placeholder="Email" style="width:100%; padding:12px; margin:6px 0; border-radius:30px; border:1px solid #d1d9e6;">
+          <textarea placeholder="Message" rows="4" style="width:100%; padding:12px; border-radius:20px; border:1px solid #d1d9e6;"></textarea>
+          <button class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap;">
+    <div><strong>SOLITAIRE FINZ MART</strong><br>© 2026 All rights reserved.</div>
+    <div><i class="fas fa-phone"></i> +91 8779023084<br><i class="fas fa-envelope"></i> sachinkale241981@gmail.com</div>
+    <div><i class="fas fa-map-pin"></i> Shop No. 8, Janaram Niwas, Purna, Bhiwandi 421302</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918779023084" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+
+<script>
+  // Dark/Light Toggle
+  const toggle = document.getElementById('themeToggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    toggle.innerHTML = document.body.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  });
+
+  // Simulate real-time counters + notifications
+  function updateDashboard() {
+    const total = document.getElementById('totalLeads');
+    const newEnq = document.getElementById('newEnquiries');
+    const inProc = document.getElementById('inProcess');
+    const approv = document.getElementById('approved');
+    const disb = document.getElementById('disbursed');
+    const agents = document.getElementById('activeAgents');
+
+    if (total) {
+      let base = 347;
+      setInterval(() => {
+        const delta = Math.floor(Math.random() * 3);
+        base += delta;
+        total.innerText = base;
+        newEnq.innerText = Math.floor(Math.random() * 20 + 20);
+        inProc.innerText = Math.floor(Math.random() * 40 + 70);
+        approv.innerText = Math.floor(Math.random() * 20 + 50);
+        disb.innerText = Math.floor(Math.random() * 15 + 35);
+        agents.innerText = Math.floor(Math.random() * 10 + 45);
+      }, 4000);
+    }
+  }
+  updateDashboard();
+
+  // Simulate new notifications
+  const notifList = document.getElementById('notifList');
+  const msgs = [
+    '<i class="fas fa-user-plus"></i> New lead: Suresh Reddy (Business Loan)',
+    '<i class="fas fa-user-check"></i> Agent assigned: Priya M. → Meera Nair',
+    '<i class="fas fa-file-alt"></i> Pending documents: Sunil Desai',
+    '<i class="fas fa-check-circle"></i> Loan approved: Ramesh Iyer',
+    '<i class="fas fa-bell"></i> Follow-up reminder: Anita Patel'
+  ];
+  setInterval(() => {
+    if (notifList) {
+      const rand = msgs[Math.floor(Math.random() * msgs.length)];
+      const newNotif = document.createElement('div');
+      newNotif.className = 'notif-item';
+      newNotif.innerHTML = `<span>${rand}</span> <small>just now</small>`;
+      notifList.prepend(newNotif);
+      if (notifList.children.length > 6) notifList.removeChild(notifList.lastChild);
+    }
+  }, 5000);
+
+  // Form submission demo
+  document.getElementById('enquiryForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('✅ Enquiry submitted! Our team will contact you shortly.');
+  });
+
+  // Agent registration
+  document.querySelector('#agent form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('✅ Registration submitted! We will contact you for onboarding.');
+  });
+</script>
+</body>
+</html>
